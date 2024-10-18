@@ -28,8 +28,9 @@ primer = """
     - Ingredients list (hypothetical)
     - Use cases for different skin types
     - Cautions (e.g., pregnancy, allergies)
-    - Detailed (6-8 sentences) information about the product's benefits
-    - Common FAQs with answers
+    - Detailed 200-300 words information about the product's benefits
+    - Common FAQs with answers with Q for question and A for answer
+    - Write a heart tempting hooks
     - Meta Title
     - Meta Description
     Ensure each section is clearly labeled and the description is comprehensive, formatted clearly, and written in a professional tone.
@@ -40,12 +41,12 @@ def send_primer():
     Sends the initial primer message to OpenAI API to establish context.
     """
     openai.ChatCompletion.create(
-        model="gpt-4",
+         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": role_prompt},
             {"role": "user", "content": primer}
         ],
-        max_tokens=100,
+        max_tokens=150,
     )
     print("Primer set successfully.")
 
@@ -55,7 +56,7 @@ def generate_product_description(product_name):
     """
     prompt = f"""
     Write an SEO-ready, structured product description for the skincare product called '{product_name}'. 
-    Please follow above primer instruction and this structure:
+    Please follow this structure:
     - Title: 
     - Short Description: 
     - Key Features: 
@@ -63,7 +64,8 @@ def generate_product_description(product_name):
     - Use Cases: 
     - Cautions: 
     - Detailed Benefits: 
-    - Common FAQs: 
+    - Common FAQs:
+    - Hooks: 
     - Meta Title: 
     - Meta Description: 
     Make sure to search the internet for authentic and valuable content before writing.
@@ -71,7 +73,7 @@ def generate_product_description(product_name):
 
     # Make a request to the OpenAI ChatCompletion API
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": role_prompt},
             {"role": "user", "content": prompt}

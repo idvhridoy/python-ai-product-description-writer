@@ -28,7 +28,7 @@ primer = """
     - Ingredients list (hypothetical)
     - Use cases for different skin types
     - Cautions (e.g., pregnancy, allergies)
-    - Detailed 200-300 words information about the product's benefits
+    - Detailed (6-8 sentences) information about the product's benefits
     - Common FAQs with answers with Q for question and A for answer
     - Write a heart tempting hooks
     - Meta Title

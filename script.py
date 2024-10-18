@@ -26,6 +26,7 @@ primer = """
     - Short description (1-2 sentences)
     - Bullet points for key features
     - Ingredients list (hypothetical)
+    - Skin Types
     - Use cases for different skin types
     - Cautions (e.g., pregnancy, allergies)
     - Detailed (6-8 sentences) information about the product's benefits
@@ -61,6 +62,7 @@ def generate_product_description(product_name):
     - Short Description: 
     - Key Features: 
     - Ingredients: 
+    - Skin Types:
     - Use Cases: 
     - Cautions: 
     - Detailed Benefits: 
